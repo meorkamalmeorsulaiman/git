@@ -477,7 +477,9 @@ Use case 2:
   kamal@TS-Kamal:~/docker/lab/git/kamal/git$ 
   ```
 
-- See: [Commit Lesson-8](https://github.com/meorkamalmeorsulaiman/git/commits/lesson-8)
-- There are many commits in this branch and it was behind *main*.
-- Another developer can just pull this branch one I have push it to the *golden* repo
-- Once ready then just merge to main
+  - See: [Commit Lesson-8](https://github.com/meorkamalmeorsulaiman/git/commits/lesson-8)
+  - There are many commits in this branch and it was behind *main*.
+  - Another developer can just pull this branch one I have push it to the *golden* repo
+  - Once ready then just merge to main
+  - Noting to add
+  
