@@ -318,3 +318,48 @@ Already up to date.
 $ git branch --delete [branch name] #delete branch
 $ git branch --delete --force [branch-name] #delete with force, git will warn and will not delete if it haven't merge
 ```
+
+## Syncing local and remote copies of repo
+
+- When using git, the team must designated one of the repo as a *golden* repo
+- That repo will be the latest and stable version of code base
+- Every developer will edit the codes with their own fixes, it won't be officially part of the project's stable codes if it still put into the *golden* repository
+- The workflow would be:
+  - Developer *a* has new fixes
+  - For developer *b* to get the new fix
+  - Developer *a* need to push into golden repo
+  - Then, developer *b* pull the branch from the golden repo
+- To sync your repo with the *golden* repo, you need to know that the *golden* repo exists
+- Any repo that is not in your local computer called *remote* repo
+- There are 2 ways to get a repo onto your computer:
+  - by `git init` or `git clone`
+- `git clone` is the common to get remote repository
+- 2 forms of cloning, **HTTPS** or **SSH**
+- Example of cloning:
+
+```bash
+$ git clone git@github.com:meorkamalmeorsulaiman/git.git
+$ git clone 
+```
+
+- Check the remote copy listed:
+
+```bash
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git remote --verbose
+origin  https://github.com/meorkamalmeorsulaiman/git.git (fetch)
+origin  https://github.com/meorkamalmeorsulaiman/git.git (push)
+```
+
+- fetch is to get others commits
+- push is sending your commits
+- Noticed the word *origin*, it is to refer the golden repository which it the remote repo
+
+## Pushing
+
+- *push* is a term for send
+- It's a process of copying your local commits to the *golden* repo
+- To *push* you must make sure that you are in the branch you want to *push*, and then *push* it
+- For the first time, you need to tell the remote repo what to nate the copy of your branch
+- The remote copy of your branch in the *golden* repo is informally called the *upstream* branch
+- You need to switch to the local branch and pass a few extra options to `git push`
+- Example:
