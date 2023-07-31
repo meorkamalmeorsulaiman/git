@@ -438,10 +438,9 @@ Fast-forward
   - Someone has update and merge into main
   - Current main it not synced
   - Use the step above, pull from the *golden* repo main to local main
-  - Switch to new branch and merge it with the main as source
-  - Then get into your new branch as below:
+  - Switch to new branch and merge it with the main as source:
+  ```bash
+  git switch lesson-8
+  git merge main
+  ```
 
-```bash
-kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git checkout lesson-8 
-Switched to branch 'lesson-8'
-```
