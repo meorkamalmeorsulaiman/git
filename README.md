@@ -363,3 +363,27 @@ origin  https://github.com/meorkamalmeorsulaiman/git.git (push)
 - The remote copy of your branch in the *golden* repo is informally called the *upstream* branch
 - You need to switch to the local branch and pass a few extra options to `git push`
 - Example:
+
+```bash
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git status
+On branch lesson-7
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git commit -m "Adding notes for lesson-7"
+[lesson-7 90e6fb4] Adding notes for lesson-7
+ 1 file changed, 46 insertions(+), 1 deletion(-)
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git push --set-upstream origin lesson-7 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.18 KiB | 1.18 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'lesson-7' on GitHub by visiting:
+remote:      https://github.com/meorkamalmeorsulaiman/git/pull/new/lesson-7
+remote: 
+```
