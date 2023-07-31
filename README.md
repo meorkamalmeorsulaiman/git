@@ -243,3 +243,42 @@ kamal@TS-Kamal:~/docker/lab/git/kamal/git$
 
 - You can see the latest commit has been tagged
 - I'm going to stage and stashed this change with different tag `version-1-1-tag`
+
+## Branching codes
+
+- Branch is just a series of ordered commits
+- Branch create isolated work-space
+- Later you can include the fixes into the main code that lives in main branch
+- Method will be you create new branch and later fix within the newly created branch
+- Once completed, merge with the main branch
+- Example to create branch:
+
+```bash
+git branch [branch name]
+```
+
+- List available branch:
+
+```bash
+git branch
+```
+
+- Switch to different branch
+
+```bash
+git checkout [branch-name]
+git switch [branch-name]
+```
+
+- Two command to merge from source *branch* to target *branch*:
+
+```bash
+git checkout main
+git merge [source branch]
+```
+
+- Example merged branch of `lesson-6` to `main` *branch*:
+
+```bash
+
+```
