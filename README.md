@@ -123,3 +123,21 @@ Date:   Sun Jul 30 20:14:12 2023 +0800
 ```
 
 - Every commit will be hashed 
+
+## Exclude files from the repository
+
+- You can exclude file to be stashed in the repository
+- Example 1 dir and 1 files that could be added:
+
+```bash
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git status
+On branch lesson-4
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .ide_config/
+        personal-notes.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ 
+
+```
