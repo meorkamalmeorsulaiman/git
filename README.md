@@ -1,7 +1,8 @@
 # git
+
 This is where all the learning git's notes
 
-## Requirements 
+## Requirements
 
 - Ensure git install
 - Validate git installed:
@@ -30,7 +31,6 @@ branch.main.merge=refs/heads/main
 - Conifgure email and username:
 
 ```sh
-$ git config --global user.email "meorkamameorsulaiman@gmail.com"
-$ git config --global user.name "Kamal sulaiman"
+($)git config --global user.email "meorkamameorsulaiman@gmail.com"
+($)git config --global user.name "Kamal sulaiman"
 ```
-
