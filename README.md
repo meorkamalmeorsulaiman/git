@@ -311,3 +311,10 @@ To https://github.com/meorkamalmeorsulaiman/git.git
 kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git pull
 Already up to date.
 ```
+
+- More branch commands:
+
+```sh
+$ git branch --delete [branch name] #delete branch
+$ git branch --delete --force [branch-name] #delete with force, git will warn and will not delete if it haven't merge
+```
