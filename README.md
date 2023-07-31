@@ -280,5 +280,34 @@ git merge [source branch]
 - Example merged branch of `lesson-6` to `main` *branch*:
 
 ```bash
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git add README.md 
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git status
+On branch lesson-6
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
 
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git commit --message="Adding notes for lesson-6"
+[lesson-6 bc5e366] Adding notes for lesson-6
+ 1 file changed, 40 insertions(+), 1 deletion(-)
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git merge lesson-6
+Updating 6684e1d..bc5e366
+Fast-forward
+ README.md | 41 ++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 40 insertions(+), 1 deletion(-)
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git push origin main 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 715 bytes | 715.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/meorkamalmeorsulaiman/git.git
+   6684e1d..bc5e366  main -> main
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git pull
+Already up to date.
 ```
