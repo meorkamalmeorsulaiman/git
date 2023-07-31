@@ -123,3 +123,77 @@ Date:   Sun Jul 30 20:14:12 2023 +0800
 ```
 
 - Every commit will be hashed 
+
+## Exclude files from the repository
+
+- You can exclude file to be stashed in the repository
+- Example items that could be added:
+
+```bash
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git status
+On branch lesson-4
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .ide_config/
+        personal-notes.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+- Solution, create a `.gitignore` in your root project's directory:
+
+```bash
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ cat .gitignore 
+#personal notes
+personal-notes.txt
+
+#.ide_config directory
+.ide_config/
+```
+
+- Validate the file won't be included:
+
+```bash
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git status
+On branch lesson-4
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+- Staged everything the into the repository:
+
+```bash
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git add *
+The following paths are ignored by one of your .gitignore files:
+personal-notes.txt
+hint: Use -f if you really want to add them.
+hint: Turn this message off by running
+hint: "git config advice.addIgnoredFile false"
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git add .gitignore
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git status
+On branch lesson-4
+nothing to commit, working tree clean
+```
+
+- You will see that the content included in `.gitignore` would not be staged
+- Proceed to stashed into the repository
+
+
+```bash
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git commit --message="adding ignore file and update README.md"
+[lesson-4 7a5d06f] adding ignore file and update README.md
+ 1 file changed, 19 insertions(+), 1 deletion(-)
+```
