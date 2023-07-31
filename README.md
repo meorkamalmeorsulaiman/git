@@ -445,4 +445,18 @@ Fast-forward
   ```
 
 Use case 2:
- - 2 people working with branch `lesson-8`
+ - 2 people working with branch `lesson-8`:
+
+```bash
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git checkout lesson-8
+Switched to branch 'lesson-8'
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git status
+On branch lesson-8
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git add README.md 
+```
