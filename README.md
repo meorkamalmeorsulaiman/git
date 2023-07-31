@@ -394,3 +394,54 @@ remote:
 - `git fetch` used to tell the *golden* repo for it to find any new branches or commits in the *golden* repo
 - `git fetch` does not update any branch or file in the local repo
 - This command let you know if there any new update in the *golden* repo
+- Example of fetch:
+
+```bash
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git fetch
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 1.50 KiB | 768.00 KiB/s, done.
+From https://github.com/meorkamalmeorsulaiman/git
+   82869ff..99810fc  main                             -> origin/main
+ * [new branch]      meorkamalmeorsulaiman-test-fetch -> origin/meorkamalmeorsulaiman-test-fetch
+ ```
+
+ ## Pulling
+
+- To sync the branch from remote to local
+- Use `git pull`, it is a two step process:
+- Example:
+
+```bash
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git checkout main
+M       README.md
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git status
+On branch main
+Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git pull
+Updating 82869ff..99810fc
+Fast-forward
+ README.md | 7 +++++++
+ 1 file changed, 7 insertions(+)
+```
+
+- Use case:
+  - Let say you a in a new branch `lesson-8`
+  - Someone has update and merge into main
+  - Current main it not synced
+  - Use the step above, pull from the *golden* repo main to local main
+  - Switch to new branch and merge it with the main as source
+  - Then get into your new branch as below:
+
+```bash
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git checkout lesson-8 
+Switched to branch 'lesson-8'
+```
