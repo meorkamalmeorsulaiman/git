@@ -433,7 +433,7 @@ Fast-forward
  1 file changed, 7 insertions(+)
 ```
 
-- Use case:
+- Use case 1:
   - Let say you a in a new branch `lesson-8`
   - Someone has update and merge into main
   - Current main it not synced
@@ -444,3 +444,5 @@ Fast-forward
   git merge main
   ```
 
+Use case 2:
+ - 2 people working with branch `lesson-8`
