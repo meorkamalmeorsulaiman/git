@@ -205,5 +205,41 @@ kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git commit --message="adding ignore f
 - You must make sure to commit first and then later tag:
 
 ```bash
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git add README.md 
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git commit -m "Update notes for tagging"
+[lesson-5 8199fd2] Update notes for tagging
+ 1 file changed, 10 insertions(+)
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git tag version-1-0-tag
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git log
+commit 8199fd23d2b1dac849b68fe8643aecd64e65b7da (HEAD -> lesson-5, tag: version-1-0-tag)
+Author: Kamal Sulaiman <kamal.sulaiman@paynet.my>
+Date:   Mon Jul 31 21:08:33 2023 +0800
 
+    Update notes for tagging
+
+commit b607acf976273d69977c516f5e3dc7809a340c6a (origin/main, origin/HEAD, main)
+Merge: 4e0cef9 7c64fbb
+Author: meorkamalmeorsulaiman <81060743+meorkamalmeorsulaiman@users.noreply.github.com>
+Date:   Mon Jul 31 21:04:06 2023 +0800
+
+    Merge pull request #4 from meorkamalmeorsulaiman/lesson-4
+    
+    Lesson 4
+
+commit 7c64fbbc85eda943c6f31643e07470fe1e200ba5 (origin/lesson-4, lesson-4)
+Author: Kamal Sulaiman <kamal.sulaiman@paynet.my>
+Date:   Mon Jul 31 21:03:39 2023 +0800
+
+    README.md was not stashed/commited
+
+commit 7c7cf6cb16bf1ad26555fa0ced15aea8be2c8899
+Author: Kamal Sulaiman <kamal.sulaiman@paynet.my>
+Date:   Mon Jul 31 21:02:24 2023 +0800
+
+    adding ignore file what was excluded
+
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ 
 ```
+
+- You can see the latest commit has been tagged
+- I'm going to stage and stashed this change with different tag `version-1-1-tag`
