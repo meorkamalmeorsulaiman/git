@@ -387,3 +387,10 @@ remote: Create a pull request for 'lesson-7' on GitHub by visiting:
 remote:      https://github.com/meorkamalmeorsulaiman/git/pull/new/lesson-7
 remote: 
 ```
+
+## Fetching
+
+- Fetch allow to get others commit into local repo
+- `git fetch` used to tell the *golden* repo for it to find any new branches or commits in the *golden* repo
+- `git fetch` does not update any branch or file in the local repo
+- This command let you know if there any new update in the *golden* repo
