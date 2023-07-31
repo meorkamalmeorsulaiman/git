@@ -197,3 +197,13 @@ kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git commit --message="adding ignore f
 [lesson-4 7a5d06f] adding ignore file and update README.md
  1 file changed, 19 insertions(+), 1 deletion(-)
 ```
+
+## Tagging
+
+- You can tag particular commit
+- *tags* help to identify which features has been deployed on production
+- You must make sure to commit first and then later tag:
+
+```bash
+
+```
