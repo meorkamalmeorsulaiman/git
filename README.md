@@ -122,7 +122,7 @@ Date:   Sun Jul 30 20:14:12 2023 +0800
     Initial commit
 ```
 
-- Every commit will be hashed 
+- Every commit will be hashed
 
 ## Exclude files from the repository
 
@@ -190,7 +190,6 @@ nothing to commit, working tree clean
 
 - You will see that the content included in `.gitignore` would not be staged
 - Proceed to stashed into the repository
-
 
 ```bash
 kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git commit --message="adding ignore file and update README.md"
@@ -315,8 +314,8 @@ Already up to date.
 - More branch commands:
 
 ```sh
-$ git branch --delete [branch name] #delete branch
-$ git branch --delete --force [branch-name] #delete with force, git will warn and will not delete if it haven't merge
+git branch --delete [branch name] #delete branch
+git branch --delete --force [branch-name] #delete with force, git will warn and will not delete if it haven't merge
 ```
 
 ## Syncing local and remote copies of repo
@@ -338,8 +337,8 @@ $ git branch --delete --force [branch-name] #delete with force, git will warn an
 - Example of cloning:
 
 ```bash
-$ git clone git@github.com:meorkamalmeorsulaiman/git.git
-$ git clone 
+git clone git@github.com:meorkamalmeorsulaiman/git.git
+git clone 
 ```
 
 - Check the remote copy listed:
@@ -408,7 +407,7 @@ From https://github.com/meorkamalmeorsulaiman/git
  * [new branch]      meorkamalmeorsulaiman-test-fetch -> origin/meorkamalmeorsulaiman-test-fetch
  ```
 
- ## Pulling
+## Pulling
 
 - To sync the branch from remote to local
 - Use `git pull`, it is a two step process:
@@ -433,14 +432,52 @@ Fast-forward
  1 file changed, 7 insertions(+)
 ```
 
-- Use case:
+- Use case 1:
   - Let say you a in a new branch `lesson-8`
   - Someone has update and merge into main
   - Current main it not synced
   - Use the step above, pull from the *golden* repo main to local main
   - Switch to new branch and merge it with the main as source:
+
   ```bash
   git switch lesson-8
   git merge main
   ```
 
+Use case 2:
+
+- 2 people working with branch `lesson-8`:
+
+  ```bash
+  kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git status
+  On branch lesson-8
+  Your branch is up to date with 'origin/lesson-8'.
+
+  Changes not staged for commit:
+    (use "git add <file>..." to update what will be committed)
+    (use "git restore <file>..." to discard changes in working directory)
+          modified:   README.md
+
+  no changes added to commit (use "git add" and/or "git commit -a")
+  kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git add README.md 
+  kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git commit -m "adding another notes for lesson-8"
+  [lesson-8 b7c9441] adding another notes for lesson-8
+  1 file changed, 15 insertions(+), 1 deletion(-)
+  kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git push --set-upstream origin lesson-8
+  Enumerating objects: 5, done.
+  Counting objects: 100% (5/5), done.
+  Delta compression using up to 8 threads
+  Compressing objects: 100% (3/3), done.
+  Writing objects: 100% (3/3), 439 bytes | 439.00 KiB/s, done.
+  Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+  remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+  To https://github.com/meorkamalmeorsulaiman/git.git
+    20fde28..b7c9441  lesson-8 -> lesson-8
+  Branch 'lesson-8' set up to track remote branch 'lesson-8' from 'origin'.
+  kamal@TS-Kamal:~/docker/lab/git/kamal/git$ 
+  ```
+
+- See: [Commit Lesson-8](https://github.com/meorkamalmeorsulaiman/git/commits/lesson-8)
+- There are many commits in this branch and it was behind *main*.
+- Another developer can just pull this branch one I have push it to the *golden* repo
+- Once ready then just merge to main
