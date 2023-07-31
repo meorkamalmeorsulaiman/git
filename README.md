@@ -448,10 +448,10 @@ Use case 2:
  - 2 people working with branch `lesson-8`:
 
 ```bash
-kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git checkout lesson-8
-Switched to branch 'lesson-8'
 kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git status
 On branch lesson-8
+Your branch is up to date with 'origin/lesson-8'.
+
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
@@ -459,4 +459,19 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git add README.md 
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git commit -m "adding another notes for lesson-8"
+[lesson-8 b7c9441] adding another notes for lesson-8
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ git push --set-upstream origin lesson-8
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 439 bytes | 439.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/meorkamalmeorsulaiman/git.git
+   20fde28..b7c9441  lesson-8 -> lesson-8
+Branch 'lesson-8' set up to track remote branch 'lesson-8' from 'origin'.
+kamal@TS-Kamal:~/docker/lab/git/kamal/git$ 
 ```
