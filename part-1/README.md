@@ -1,0 +1,107 @@
+# Git demo
+
+This are some oprational procedures with git
+
+## Seting up the config 
+
+Several common config require
+ - Name
+ - Email
+
+To see the current config on your get use can use command as below in GIT Bash
+
+```
+MK97@DESKTOP-B1EU7E6 MINGW64 ~/Documents/github
+$ git -v
+git version 2.49.0.windows.1
+
+MK97@DESKTOP-B1EU7E6 MINGW64 ~/Documents/github
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=schannel
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.email=meorkamil97@gmail.com
+```
+
+Let's set the name and email
+
+```
+MK97@DESKTOP-B1EU7E6 MINGW64 ~/Documents/github
+$ git config --global user.email "meorkamalmeorsulaiman@gmail.com"
+
+MK97@DESKTOP-B1EU7E6 MINGW64 ~/Documents/github
+$ git config --global user.name "Kamal Sulaiman"
+```
+
+Now, validate the settings
+
+```
+MK97@DESKTOP-B1EU7E6 MINGW64 ~/Documents/github
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=schannel
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.email=meorkamalmeorsulaiman@gmail.com
+user.name=Kamal Sulaiman
+```
+
+## Download repository to local machine
+
+Think of repository as a directory contain all the files. You will be working on that directory and the first steps is to download the directory or repository. Below shows how you can download a repository
+
+```
+MK97@DESKTOP-B1EU7E6 MINGW64 ~/Documents/github
+$ git clone https://github.com/meorkamalmeorsulaiman/git.git
+Cloning into 'git'...
+remote: Enumerating objects: 83, done.
+remote: Counting objects: 100% (83/83), done.
+remote: Compressing objects: 100% (63/63), done.
+remote: Total 83 (delta 20), reused 58 (delta 16), pack-reused 0 (from 0)
+Receiving objects: 100% (83/83), 25.69 KiB | 797.00 KiB/s, done.
+Resolving deltas: 100% (20/20), done.
+
+MK97@DESKTOP-B1EU7E6 MINGW64 ~/Documents/github
+$ ls
+git/
+```
+
+Above you can see the have clone the repo and one folder exist which is the repository downloaded or clone. Now let go and look at what are there
+
+```
+MK97@DESKTOP-B1EU7E6 MINGW64 ~/Documents/github
+$ cd git/
+
+MK97@DESKTOP-B1EU7E6 MINGW64 ~/Documents/github/git (main)
+$ ls
+README.md  test_file.txt
+```
+## Branch
+
+Now there are few file, now let see what branch is. Below we can see only one branch which is `main`
+
+```
+MK97@DESKTOP-B1EU7E6 MINGW64 ~/Documents/github/git (main)
+$ git branch
+* main
+```
+`main` branch is where all the finalized files or codes that we have created. Finalized mean it is tested, validated and working codes. At this point, I will create or push a branch to create this demo documents. 
