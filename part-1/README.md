@@ -71,7 +71,7 @@ Think of repository as a directory contain all the files. You will be working on
 
 ```
 MK97@DESKTOP-B1EU7E6 MINGW64 ~/Documents/github
-$ git clone https://github.com/meorkamalmeorsulaiman/git.git
+$ git clone https://[PAT]@github.com/meorkamalmeorsulaiman/git.git
 Cloning into 'git'...
 remote: Enumerating objects: 83, done.
 remote: Counting objects: 100% (83/83), done.
@@ -85,7 +85,7 @@ $ ls
 git/
 ```
 
-Above you can see the have clone the repo and one folder exist which is the repository downloaded or clone. Now let go and look at what are there
+Above you can see the have clone the repo and one folder exist which is the repository downloaded or clone. `[PAT]` is the personal access token. You can create in the developer settings. Now let go and look at what are there
 
 ```
 MK97@DESKTOP-B1EU7E6 MINGW64 ~/Documents/github
