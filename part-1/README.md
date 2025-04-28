@@ -2,7 +2,7 @@
 
 This are some oprational procedures with git
 
-## Seting up the config 
+## Setting up the config 
 
 Several common config require
  - Name
