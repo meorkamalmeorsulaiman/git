@@ -232,5 +232,38 @@ To https://github.com/meorkamalmeorsulaiman/git.git
 branch 'merkamalmeorsulaiman-demo' set up to track 'origin/merkamalmeorsulaiman-demo'.
 ```
 
+## Pull Request
 
+Now, we have create a pull request. Pull request in general is a change that we have propose. So this proposed change will then merge into the `main` branch. Here is the link to `demo` pull request [Demo Branch Pull Request](https://github.com/meorkamalmeorsulaiman/git/pull/14) If we dont have any conflicting codes then we can proceed to merged it into `main` branch. Let's proceed to merge it. This is done on the gui. If you check the pull request link it will shows that it has been merged. 
+
+Now we have to update our local repo so that we get the updated codes. Below we switch to `main` branch all get all the update using `pull` feature
+```
+MK97@DESKTOP-B1EU7E6 MINGW64 ~/Documents/github/git (merkamalmeorsulaiman-demo)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+MK97@DESKTOP-B1EU7E6 MINGW64 ~/Documents/github/git (main)
+$ git pull
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (5/5), 2.38 KiB | 87.00 KiB/s, done.
+From https://github.com/meorkamalmeorsulaiman/git
+   ad462ef..db55d23  main       -> origin/main
+   b3c938e..a725ef6  meorkamalmeorsulaiman-part-1 -> origin/meorkamalmeorsulaiman-part-1
+Updating ad462ef..db55d23
+Fast-forward
+ test_file_1.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test_file_1.txt
+```
+
+Now we can see our new file included in the `main` branch
+```
+MK97@DESKTOP-B1EU7E6 MINGW64 ~/Documents/github/git (main)
+$ ls
+README.md  test_file.txt  test_file_1.txt
+```
 
